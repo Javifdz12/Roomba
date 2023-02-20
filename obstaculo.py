@@ -21,6 +21,6 @@ class Obstaculo:
     def colocar_ob(self):
         #Creamos frame el cual estamos haciendo pasar por un obstaculo para poder visualizar el problema.
         #Le pasamos la ventana en la que queremos meterlo y el color que queremos que tenga.
-        self.frame=Frame(self.ventana,bg=self.bg,relief=self.relief)
+        frame=Frame(self.ventana,bg=self.bg,relief=self.relief)
         #En este caso utilizo .place(x,y,width,height) para posicionarlo en la ventana.
-        self.frame.place(x=self.x,y=self.y,width=self.ancho,height=self.largo)
+        frame.place(x=self.x,y=self.y,width=self.ancho,height=self.largo)
