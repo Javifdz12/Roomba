@@ -19,7 +19,7 @@ def lanzar2():
     #Creacion de la ventana principal.
     mi_ventana = Tk()
     mi_ventana.title('Habitación')
-    mi_ventana.geometry(f'{a+30}x{s+30}')
+    mi_ventana.geometry(f'{a+60}x{s+60}')
     mi_ventana.configure(bg='black',relief='sunken')
     #Creacion de la habitacion dentro de la ventana principal(para hacer efecto de marco).
     marco=Frame(mi_ventana,width=a,height=s)
@@ -29,15 +29,14 @@ def lanzar2():
     a1=a*s
     #Creacion De Obstaculos.
     b=int(input('¿Cuántos obstáculos tiene la habitacion? '))
-    print('Si la habitación es la siguiente:')
-    print(f'{s}')
-    print('  ^')
-    print('y |\n')
+    print('Si la habitación es la siguiente:\n')
+    print(f'   0                  x \n   -- -- -- -- -- -- -- > {a}')
+    print('0 |\n')
     print('  |\n')
     print('  |\n')
     print('  |\n')
-    print('  |')
-    print(f'   -- -- -- -- -- -- --  > {a}\n                       x')
+    print('y |')
+    print(f'  v\n {s}')
     #Colores de los obstaculos.
     colores=['grey','blue','yellow','red']
     #Area total inicial de los obstaculos.
@@ -45,8 +44,8 @@ def lanzar2():
     i=0
     obs=[]
     while i<b:
-        c=int(input(f'¿Cuál es la posicion x de la esquina superior derecha obstaculo {i+1}? '))
-        d=int(input(f'¿Cuál es la posicion y de la esquina superior derecha obstaculo {i+1}? '))
+        c=int(input(f'¿Cuál es la posicion x de la esquina superior izquierda obstaculo {i+1}? '))
+        d=int(input(f'¿Cuál es la posicion y de la esquina superior izquierda obstaculo {i+1}? '))
         e=int(input(f'¿Cuál es el largo del obstaculo {i+1}?(cm) '))
         f=int(input(f'¿Cuál es el ancho del obstaculo {i+1}?(cm) '))
         ob=Obstaculo(c,d,e,f,marco,colores[i],'sunken')
