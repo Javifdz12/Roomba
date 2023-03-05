@@ -1,3 +1,4 @@
+from tkinter import Frame
 zona1={'Largo':500,'Ancho':150}
 zona2={'Largo':480,'Ancho':101}
 zona3={'Largo':309,'Ancho':480}
@@ -15,6 +16,4 @@ def tiempo_limp(area_hab,vel_rob):
     t=area_hab/vel_rob
     return t*60
 
-print(f'{area_hab(hab1)} m2')
-print(f'{tiempo_limp(area_hab(hab1),velocidad)} min')
 
